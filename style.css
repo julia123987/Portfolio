@@ -11,7 +11,12 @@
     #smallSize{
         display: flex;
         flex-direction: column;
+        /* overflow-y: scroll !important; */
     }
+    /* #skills{
+        overflow-y: scroll !important;
+
+    } */
 }
 @media(min-width: 768px) and (max-width: 992px){
     #multiscroll{
@@ -102,6 +107,7 @@ body{
 }
 #subCaption{
     color: rgb(9, 121, 70); 
+    
 }
 #caption{
     font-size: 54px;
@@ -219,6 +225,64 @@ body{
 #infoPart1 > div span{
     font-size: 54px;
     color: rgb(9, 121, 70); 
+    color: rgb(6, 75, 44);
+
+}
+#skills{
+    /* height: 100vh; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    /* overflow-y: scroll !important; */
+}
+#skills #subCaption, #skills #caption{
+    padding: 0;
+    margin: 0;
+}
+#aboutMySkills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 25%; */
+}
+#graphics{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* height: 75%;  */
+    background-color: rgb(7, 92, 54); 
+    width: 100%;
+    padding: 15px 0;
+}
+#graphics > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white; 
+    width: 240px ;
+    height: 240px ;
+    margin: 15px;
+    border-radius: 10px;
+    /* padding: 10px; */
+}
+#graphics > div > h5{
+    font-size: 75%;
+    /* padding: 5px;
+    margin: 5px; */
+}
+#myChart1, #myChart2, #myChart3, #myChart4, #myChart5, #myChart6{
+    width: 180px !important;
+    height: 180px !important;
+    padding: 7px;
+   
+}
+#aboutMySkills #subCaption{
+    font-size: 80%;   
 }
 
 
