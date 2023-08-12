@@ -1,4 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap');
+
+
+@media(max-width: 767px){
+    #multiscroll{
+        display: none;
+    }
+    body{
+        overflow-y: scroll !important;
+    }
+    #smallSize{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(min-width: 768px) and (max-width: 992px){
+    #multiscroll{
+        display: flex;
+    }
+    #part1, #part2{
+        font-size: 60%;
+    }
+    #subCaption, #caption{
+        font-size: 150%;
+    }
+    body{
+        overflow-y: hidden;
+    }
+    #smallSize{
+        display: none;
+    }
+}
+@media(min-width: 993px){
+    #multiscroll{
+        display: flex;
+    }
+    #smallSize{
+        display: none;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -12,10 +52,46 @@ body{
     flex-direction: column;
     padding: 50px;
 }
+#infoSmall{
+    display: flex;
+    flex-direction: column;
+}
+#infoSmall #subCaptionSmall{
+    text-align: center;
+    padding: 30px 0;
+    color: rgb(9, 121, 70);
+}
+#infoSmall #caption{
+    text-align: center;
+}
+#smallSize{
+    margin-top: 60px;
+}
+#fotoSmall{
+    height: 60vh;  
+}
+#myFotoSmall{
+    display: flex;   
+    justify-content: space-evenly;
+    align-items: center;
+}
+#myFotoSmall #captionName{
+    font-size: 150%;
+    text-align: center;
+    line-height: 55px;
+    text-shadow: 5px 5px 5px rgba(53, 53, 53, 0.375);
+}
+
 #menu{
     position: fixed;
     top: 20px;
     left: 20px;
+}
+#scrollInfo{
+    position: fixed;
+    top: 90%;
+    left: 20px;
+    font-size: 30%;
 }
 #menu ul li{
     padding: 0 10px;
@@ -56,10 +132,22 @@ body{
     font-weight: 100;
     line-height: 36px;
 }
+#aboutMeSmall{
+    font-size: 95%;
+    color: rgba(85, 85, 85, 0.777);
+    font-weight: 100;
+    line-height: 36px;
+    text-align: center;
+}
 #moreDetail{
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+}
+#moreDetailSmall{
+    text-align: center;
+    padding: 30px 0;
+    font-size: 95%;
 }
 #detailPart1 > div #label, #detailPart2 > div #label{
     font-size: 75%;
@@ -74,10 +162,35 @@ body{
     flex-direction: column;
     padding: 10px 0;
 }
+#moreInfoSmall{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    background-color:  rgb(9, 121, 70);
+}
 
 #moreInfo > div{
     display: flex;
     justify-content: center;
+}
+#moreInfoSmall > div{
+    display: flex;
+    justify-content: center;
+    font-size: 87%;
+}
+#moreInfoSmall #infoPart1 > div, #moreInfoSmall #infoPart > div{
+    background-color: white;
+    margin: 5px;
+    width: 30%;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(85, 85, 85, 0.777);
 }
 #infoPart1 > div, #infoPart2 > div{
     background-color: white;
