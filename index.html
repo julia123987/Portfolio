@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.2.3/jquery.multiscroll.css"
+        integrity="sha512-n5j2D5izKfSAkjHffxne+LCQ8PuSpprGu1QAVNLhjv+LCI8wS8yCKiC2aQpBnzMNUTnRX4Ls7yFJoQMpOUQGfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div id="menu" class="fixed-action-btn">
+            <a class="btn-floating btn-large green darken-4">
+                <i class="large material-icons">apps</i>
+            </a>
+            <ul>
+                <li id="goHome"><a class="btn-floating tooltipped green lighten-3" data-position="bottom"
+                        data-tooltip="home page"><i class="material-icons">home</i></a></li>
+                <li id="myContact"><a class="btn-floating tooltipped green lighten-1" data-position="bottom"
+                        data-tooltip="my contact"><i class="material-icons">contact_mail</i></a></li>
+                <li id="myProject"><a class="btn-floating tooltipped green" data-position="bottom"
+                        data-tooltip="my project"><i class="material-icons">description</i></a></li>
+                <li id="mySkills"><a class="btn-floating tooltipped green darken-1" data-position="bottom"
+                        data-tooltip="my skills"><i class="material-icons">school</i></a></li>
+                <li id="myInfo"><a class="btn-floating tooltipped green darken-3" data-position="bottom"
+                        data-tooltip="about me"><i class="material-icons">account_circle</i></a> </li>
+            </ul>
+        </div>
+
+        <div id="multiscroll" class="multiscroll">
+            <div id="part1" class="ms-left">
+                <div class="ms-section">
+                    <div id="info">
+                        <h3 id="subCaption">Junior Front-end Developer</h3>
+                        <h1 id="name">I`m Julia Sushko</h1>
+                    </div>
+                </div>
+                <div class="ms-section" style="background-color:rgb(9, 121, 70)">
+                    <div id="moreInfo">
+                        <div id="infoPart1">
+                            <div><span>60+</span> <br> off-line lessons in <br> IT-Step Academy</div>
+                            <div><span>80+</span> <br> hours of teoretical education</div>
+                            <div><span>100+</span> <br> hours of practical training</div>
+                        </div>
+                        <div id="infoPart3">A lot of hours of self-study</div>
+                        <div id="infoPart2">
+                            <div>realisation of interesting projects during course</div>
+                            <div>developing of English writing and reading skills during course</div>
+                            <div>developing of logical mindset during course</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="part2" class="ms-right">
+                <div class="ms-section" style="background-color:rgb(9, 121, 70)"><img id="foto" src="" alt="">
+                </div>
+                <div class="ms-section">
+                    <div id="info">
+                        <h3 id="subCaption">About me</h3>
+                        <h1 id="caption">Junior Front-end Developer</h1>
+                        <p id="aboutMe">I am a goal-oriented person with an analytical mindset, a
+                            desire to realise myself in the field of Front-end Development. <br> I am stress-resistant,
+                            responsible and attentive to my duties. I have a desire to develop, improve my existing
+                            skills and acquire new ones.</p>
+                        <div id="moreDetail">
+                            <div id="detailPart1">
+                                <div><span id="label">Name: </span><span id="detail">Julia Sushko</span></div>
+                                <div><span id="label">Date of birth: </span><span id="detail">21.09.1995</span></div>
+                                <div><span id="label">Address: </span><span id="detail">67, Medova Pechera str. <br>
+                                        79038 Lviv, Ukraine</span></div>
+                            </div>
+                            <div id="detailPart2">
+                                <div><span id="label">Email: </span><span id="detail">julia.sushko.22@gmail.com</span>
+                                </div>
+                                <div><span id="label">Phone: </span><span id="detail">+38(067)851-30-88</span></div>
+                                <div><span id="label">Messanger: </span><span id="detail">WhatsApp, Viber, Telegram <br>
+                                        +38(067)851-30-88</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div id="smallSize">
+            <div id="info">
+                <h3 id="subCaption">Junior Front-end Developer</h3>
+                <h1 id="name">I`m Julia Sushko</h1>
+            </div>
+            <div id="myFoto">
+                <img id="foto" src="" alt="">
+            </div>
+            <div id="info">
+                <h3 id="subCaption">About me</h3>
+                <h1 id="caption">Junior Front-end Developer</h1>
+                <p id="aboutMe">My name is Julia. I am a goal-oriented person with an analytical mindset, a desire to realise
+                    myself and develop in the field of Front-end Development.</p>
+                    <div id="moreDetail">
+                        <div id="detailPart1">
+                            <div><span id="label">Name: </span><span id="detail">Julia Sushko</span></div>
+                            <div><span id="label">Date of birth: </span><span id="detail">21.09.1995</span></div>
+                            <div><span id="label">Address: </span><span id="detail">67, Medova Pechera str. <br> 79038 Lviv, Ukraine</span></div>
+                        </div>
+                        <div id="detailPart2">
+                            <div><span id="label">Email: </span><span id="detail">julia.sushko.22@gmail.com</span></div>
+                            <div><span id="label">Phone: </span><span id="detail">+38(067)851-30-88</span></div>
+                            <div><span id="label">Messanger: </span><span id="detail">WhatsApp, Viber, Telegram <br> +38(067)851-30-88</span></div>
+                        </div>
+                    </div>
+            </div>
+            <div>
+                <div id="moreInfo">
+                <div id="infoPart1">
+                    <div><span>60+</span> <br> off-line lessons in <br> IT-Step Academy</div>
+                    <div><span>80+</span> <br> hours of teoretical education</div>
+                    <div><span>100+</span> <br> hours of practical training</div>
+                </div>
+                <div id="infoPart2">
+                    <div>realisation ofinteresting projects during course</div>
+                    <div>developing of English writing and reading skills during course</div>
+                    <div>developing of logical mindset during course</div>  
+                </div>
+            </div>
+            </div>
+            
+
+        </div> -->
+    </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.2.3/jquery.multiscroll.min.js"
+        integrity="sha512-5hsZ5Fd/rVNkL58Tx1cbPHYKKLe/PYjc0A4lKyN50W3m31GbcnMR91ZfLBYJnKW+pvOx1j/er52iGgGZEcOTYA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

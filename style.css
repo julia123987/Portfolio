@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Rowdies', cursive;
+    font-size: 150%; 
+}
+#info{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+#menu{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+#menu ul li{
+    padding: 0 10px;
+}
+#foto{
+    width: auto;
+    height: 100vh;
+}
+#subCaption{
+    color: rgb(9, 121, 70); 
+}
+#caption{
+    font-size: 54px;
+    color: rgb(53, 53, 53);
+    line-height: 75px;
+    padding: 17px 0;
+    text-shadow: 5px 5px 5px rgba(53, 53, 53, 0.375);
+}
+#name .new{ 
+    opacity: 0; 
+}
+#name{ 
+    font-size: 96px;
+    display: none;
+    color: rgb(53, 53, 53); 
+}
+#name .div_opacity{
+  -webkit-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -ms-transition: opacity .7s ease-in-out;
+  -o-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
+  opacity: 1;
+}
+#aboutMe{
+    font-size: 75%;
+    color: rgba(85, 85, 85, 0.777);
+    font-weight: 100;
+    line-height: 36px;
+}
+#moreDetail{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+#detailPart1 > div #label, #detailPart2 > div #label{
+    font-size: 75%;
+    color: rgba(85, 85, 85, 0.777);
+}
+#detailPart1 > div #detail, #detailPart2 > div #detail{
+    font-size: 75%;
+    color: rgb(9, 121, 70); 
+}
+#moreInfo{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+#moreInfo > div{
+    display: flex;
+    justify-content: center;
+}
+#infoPart1 > div, #infoPart2 > div{
+    background-color: white;
+    margin: 5px;
+    width: 27%;
+    height: 180px;
+    padding: 15px 7px;
+    border-radius: 10px;
+    font-size: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(85, 85, 85, 0.777);
+}
+#infoPart3{
+    background-color: white;
+    margin: 5px 25px;
+    padding: 7px 7px;
+    border-radius: 10px;
+    font-size: 75%;
+    text-align: center;
+    color: rgb(7, 92, 54);
+}
+#infoPart1 > div span{
+    font-size: 54px;
+    color: rgb(9, 121, 70); 
+}
+
+
