@@ -91,6 +91,8 @@ body{
     position: fixed;
     top: 20px;
     left: 20px;
+            width: 50px;
+            height: 50px;
 }
 #scrollInfo{
     position: fixed;
@@ -225,8 +227,6 @@ body{
 #infoPart1 > div span{
     font-size: 54px;
     color: rgb(9, 121, 70); 
-    color: rgb(6, 75, 44);
-
 }
 #skills{
     /* height: 100vh; */
@@ -237,7 +237,7 @@ body{
     padding: 25px 0;
     /* overflow-y: scroll !important; */
 }
-#skills #subCaption, #skills #caption{
+#skills #subCaption, #skills #caption, #contact #subCaption, #contact #caption{
     padding: 0;
     margin: 0;
 }
@@ -284,5 +284,88 @@ body{
 #aboutMySkills #subCaption{
     font-size: 80%;   
 }
+
+
+#contact{
+    height: 100vh;
+}
+#captionForContact{
+    padding: 0;
+    margin: 0;
+    height: 35%;
+    background-image: url(./patrick-fore-UxPYxMIDcKU-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+#captionForContact div{
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+}
+#moreContactInfo{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+#contact #subCaption{
+    font-size: 80%;
+    color: rgb(7, 92, 54);
+}
+
+#moreContactInfo #adress, #moreContactInfo #email, #moreContactInfo #phone{
+    font-size: 75%;
+    color: rgba(85, 85, 85, 0.777);
+}
+#contactFooterAdress, #contactFooterEmail, #contactFooterPhone{
+    font-size: 80%;
+    color: rgb(9, 121, 70); 
+    transition: transform .5s;
+    
+}
+#contactFooterEmail:hover{
+    cursor: pointer;
+    color: rgb(6, 59, 35);
+    transform: scale(1.05);
+}
+#contactFooterPhone:hover{
+    cursor: pointer;
+    color: rgb(6, 59, 35);
+    transform: scale(1.05);   
+}
+#formForContact{
+    height: 45%;
+    padding: 5px 25px;
+    width: 50%;
+}
+/* #formForContact .row{
+    margin: 0;
+    padding: 0;
+} */
+#contactMe{
+    width: 100%;
+    display: flex;   
+    flex-wrap: wrap;
+}
+#followMe{
+    width: 50%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding: 5px 25px; 
+}
+#social a{
+    padding: 0 15px;
+}
+
+
 
 

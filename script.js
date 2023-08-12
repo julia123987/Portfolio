@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Tooltip.init(elems, 0);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems, 576);
+});
+
 let fotoArr = ['./DSC_1003.jpg', './DSC_1009.jpg', './DSC_1000.jpg']
 let foto = document.getElementById('foto')
 let menu = document.getElementById('menu')
@@ -48,6 +53,8 @@ let myChart4 = document.getElementById('myChart4')
 let myChart5 = document.getElementById('myChart5')
 let myChart6 = document.getElementById('myChart6')
 
+let contactFooterEmail = document.getElementById('contactFooterEmail')
+
 window.addEventListener('load', function(){
     foto.src = `${fotoArr[0]}`
     timerId = setInterval(function(){
@@ -57,6 +64,16 @@ window.addEventListener('load', function(){
     }, 1800)
 
 })
+
+// contactFooterEmail.addEventListener('click', function(){
+//     // contactFooterEmail.select()
+//     console.log( contactFooterEmail.innerHTML)
+//     document.execCommand("copy")
+    
+//     alert(`${contactFooterEmail.innerText}`)
+// })
+
+
 
 goHome.addEventListener('click', function(){
     partSkills.style.display = 'none'
@@ -115,6 +132,12 @@ mySkills.addEventListener('click', function(){
         }
     })
 })
+
+myContact.addEventListener('click', function(){
+    // document.body.style.overflowY = 'auto'
+
+})
+
 
 
 
