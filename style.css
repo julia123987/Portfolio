@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap');
-
+@keyframes go-center{        
+    from { 
+        bottom: -100px; 
+        opacity: 0.2;
+    }            
+    to { bottom: 50px; } 
+  }
 
 @media(max-width: 767px){
     #multiscroll{
@@ -13,10 +19,50 @@
         flex-direction: column;
         /* overflow-y: scroll !important; */
     }
+    #project{
+        height: 100% !important;
+    }
+    #allCases{
+        animation: none !important;
+        position: relative;
+        top: 20px !important;
+        padding: 15px 0;
+    }
+    
     /* #skills{
         overflow-y: scroll !important;
 
     } */
+    #contact{
+        height: fit-content!important;  
+    }
+    #captionForContact{
+        height: 100% !important; 
+    }
+    #captionForContact h1, #captionForContact h3{
+        color: white !important;   
+    }
+    #captionForContact > div{
+        background-color: transparent !important;
+    }
+    #contactMe{
+        flex-direction: column !important;
+    }
+    #contactMe > form, #contactMe > div{
+        width: 100%;
+        height: 100%;
+        margin: 20px 0;
+    }
+    #moreContactInfo #adress, #moreContactInfo #email, #moreContactInfo #phone{
+        font-size: 65% !important;
+    }
+    #contactFooterAdress, #contactFooterEmail, #contactFooterPhone{
+        font-size: 70% !important;
+    }
+    #allCases > div{
+        width: 250px !important;
+    }
+    
 }
 @media(min-width: 768px) and (max-width: 992px){
     #multiscroll{
@@ -33,6 +79,23 @@
     }
     #smallSize{
         display: none;
+    }
+    #allCases{
+        animation: none !important;
+    }
+    #project{
+        height: fit-content !important;
+    }
+    #allCases{
+        animation: none !important;
+        position: relative;
+        top: 20px !important;
+    }
+    #allCases > div{
+        width: 200px !important;
+    }
+    #cssGenerator, #currency, #player, #paint{
+        height: 470px !important;
     }
 }
 @media(min-width: 993px){
@@ -51,6 +114,7 @@
 body{
     font-family: 'Rowdies', cursive;
     font-size: 150%; 
+    overflow-y: scroll !important;
 }
 #info{
     display: flex;
@@ -108,8 +172,7 @@ body{
     height: 100vh;
 }
 #subCaption{
-    color: rgb(9, 121, 70); 
-    
+    color: rgb(9, 121, 70);    
 }
 #caption{
     font-size: 54px;
@@ -222,14 +285,15 @@ body{
     border-radius: 10px;
     font-size: 75%;
     text-align: center;
-    color: rgb(7, 92, 54);
+    color: rgb(40, 172, 113);
+    
 }
 #infoPart1 > div span{
     font-size: 54px;
     color: rgb(9, 121, 70); 
 }
 #skills{
-    /* height: 100vh; */
+    height: 100%;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -237,9 +301,12 @@ body{
     padding: 25px 0;
     /* overflow-y: scroll !important; */
 }
-#skills #subCaption, #skills #caption, #contact #subCaption, #contact #caption{
+#skills #subCaption, #skills #caption, #contact #subCaption, #contact #caption, #project #subCaption, #project #caption{
     padding: 0;
     margin: 0;
+}
+#skills #subCaption, #contact #subCaption, #project #subCaption{
+    font-size: 80%;   
 }
 #aboutMySkills{
     display: flex;
@@ -264,35 +331,36 @@ body{
     justify-content: center;
     align-items: center;
     background-color: white; 
-    width: 240px ;
-    height: 240px ;
+    width: 270px ;
+    height: 270px ;
     margin: 15px;
     border-radius: 10px;
-    /* padding: 10px; */
+    padding: 25px;
 }
 #graphics > div > h5{
     font-size: 75%;
-    /* padding: 5px;
-    margin: 5px; */
 }
 #myChart1, #myChart2, #myChart3, #myChart4, #myChart5, #myChart6{
-    width: 180px !important;
-    height: 180px !important;
-    padding: 7px;
-   
+    /* width: 180px !important;
+    height: 180px !important; */
+    padding: 7px;  
 }
-#aboutMySkills #subCaption{
-    font-size: 80%;   
-}
+
 
 
 #contact{
-    height: 100vh;
+    height: calc(100vh - 30px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 #captionForContact{
     padding: 0;
     margin: 0;
     height: 35%;
+    width: 100%;
     background-image: url(./patrick-fore-UxPYxMIDcKU-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -313,13 +381,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
+    flex-wrap: wrap;
 }
-#contact #subCaption{
-    font-size: 80%;
-    color: rgb(7, 92, 54);
-}
-
 #moreContactInfo #adress, #moreContactInfo #email, #moreContactInfo #phone{
     font-size: 75%;
     color: rgba(85, 85, 85, 0.777);
@@ -327,8 +390,7 @@ body{
 #contactFooterAdress, #contactFooterEmail, #contactFooterPhone{
     font-size: 80%;
     color: rgb(9, 121, 70); 
-    transition: transform .5s;
-    
+    transition: transform .5s;   
 }
 #contactFooterEmail:hover{
     cursor: pointer;
@@ -345,26 +407,172 @@ body{
     padding: 5px 25px;
     width: 50%;
 }
-/* #formForContact .row{
-    margin: 0;
-    padding: 0;
-} */
 #contactMe{
     width: 100%;
-    display: flex;   
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;   
+    /* flex-wrap: wrap; */
 }
 #followMe{
     width: 50%;
     display: flex; 
     flex-direction: column; 
-    align-items: center;
+    align-items:flex-start;
     justify-content: center;
     padding: 5px 25px; 
 }
+#social{
+    padding: 17px 0;
+}
 #social a{
     padding: 0 15px;
+    transition: transform .5s;
 }
+#social a :hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#followMe #subCaption{
+    font-size: 100%;
+    padding-left: 15px;
+}
+
+
+#project{
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(53, 53, 53, 0.1);
+    padding: 15px 0;
+
+
+}
+#captionForProjects{
+    padding: 0;
+    margin: 0;
+    height: 35%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+#allCases{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: go-center 2s;
+    bottom: 50px;
+}
+#allCases > div{
+    width: 20%;
+    margin: 10px;
+    width: 21%;
+    padding: 5px;  
+}
+
+#cssGenerator, #currency, #player, #paint{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 470px;
+    background-color: white;
+}
+#cssGenerator #caption, #currency #caption, #player #caption, #paint #caption{
+    font-size: 100%;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+    line-height: 27px;
+}
+#cssGenerator #subCaption, #currency #subCaption, #player #subCaption, #paint #subCaption{
+    font-size: 75%;
+}
+#cssGenerator p, #currency p, #player p, #paint p{
+    font-size: 65%;
+    font-weight: 100;
+    line-height: 20px;
+    padding: 15px;
+}
+#cssGenerator img, #currency img, #player img, #paint img{
+    padding: 15px 0;
+}
+/* .case:hover{
+    background-color:  rgb(9, 121, 70);
+    color: white;   
+}
+.case:hover img{
+    filter: invert(100);
+}
+.case:hover h3{
+    color: white;   
+}
+.case:hover h2{
+    color: white;   
+}  */
+#cssGenerator:hover{
+    background-color:  rgb(9, 121, 70);
+    color: white;   
+}
+#cssGenerator:hover img{
+    filter: invert(100);
+}
+#cssGenerator:hover h3{
+    color: white;   
+}
+#cssGenerator:hover h2{
+    color: white;   
+}
+#currency:hover{
+    background-color:  rgb(9, 121, 70);
+    color: white;   
+}
+#currency:hover img{
+    filter: invert(100);
+}
+#currency:hover h3{
+    color: white;   
+}
+#currency:hover h2{
+    color: white;   
+}
+#player:hover{
+    background-color:  rgb(9, 121, 70);
+    color: white;   
+}
+#player:hover img{
+    filter: invert(100);
+}
+#player:hover h3{
+    color: white;   
+}
+#player:hover h2{
+    color: white;   
+}
+#paint:hover{
+    background-color:  rgb(9, 121, 70);
+    color: white;   
+}
+#paint:hover img{
+    filter: invert(100);
+}
+#paint:hover h3{
+    color: white;   
+}
+#paint:hover h2{
+    color: white;   
+}
+
 
 
 

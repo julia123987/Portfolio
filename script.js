@@ -44,6 +44,8 @@ let goHome = document.getElementById('goHome')
 let multiscroll = document.getElementById('multiscroll')
 let smallSize = document.getElementById('smallSize')
 let partSkills = document.getElementById('skills')
+let partContacts = document.getElementById('contact')
+let partProject = document.getElementById('project')
 let timerId = 0, i = 1, choose
 
 let myChart1 = document.getElementById('myChart1')
@@ -76,7 +78,9 @@ window.addEventListener('load', function(){
 
 
 goHome.addEventListener('click', function(){
+    partContacts.style.display = 'none'
     partSkills.style.display = 'none'
+    partProject.style.display = 'none'
     console.log(document.documentElement.clientWidth)
     if(document.documentElement.clientWidth <= 767) {
         smallSize.style.display = 'flex'
@@ -93,48 +97,128 @@ myInfo.addEventListener('click', function(){
 mySkills.addEventListener('click', function(){
     multiscroll.style.display = 'none'
     smallSize.style.display = 'none'
+    partContacts.style.display = 'none'
+    partProject.style.display = 'none'
     partSkills.style.display = 'flex'
     // document.body.overflow = 'auto'
-    new Chart(myChart1, { 
-        type: 'doughnut', data: {
-            datasets: [{ 
-                label: 'My knowledge in HTML5', 
-                data: [90, 10]}]
-        },
-        options: {
-            backgroundColor: ['rgb(42, 182, 119)','rgba(53, 53, 53, 0.1)'], hoverOffset: 4, hoverBorderWidth: 4, cutout: '70%' 
+new Chart(myChart1, { 
+        type: 'doughnut',
+        data: {
+            labels: ['HTML5 knowledge', 'Knowledge in progress'],
+        datasets: [{
+            label: ' % ', 
+            data: [87, 13],
+            backgroundColor: ['rgb(42, 182, 119)', 'rgba(53, 53, 53, 0.1)'],
+            hoverOffset: 8,
+            hoverBackgroundColor: ['rgb(5, 63, 38)', 'rgba(53, 53, 53, 0.5)']
+        }]}, 
+        options:{
+            plugins: {
+            legend: { display: false}
+            }
         }
-    })
-    
-    new Chart(myChart2, { 
-        type: 'doughnut', data: { 
-            datasets: [{ label: 'My knowledge in CSS3', data: [87, 13], backgroundColor: ['rgb(42, 182, 119)','rgba(53, 53, 53, 0.1)'], hoverOffset: 4, hoverBorderWidth: 4, cutout: '70%'}]
+})
+new Chart(myChart2, { 
+        type: 'doughnut',
+        data: {
+            labels: ['CSS3 knowledge', 'Knowledge in progress'],
+        datasets: [{
+            label: ' % ', 
+            data: [87, 13],
+            backgroundColor: ['rgb(32, 152, 100', 'rgba(53, 53, 53, 0.1)'],
+            hoverOffset: 8,
+            hoverBackgroundColor: ['rgb(5, 63, 38)', 'rgba(53, 53, 53, 0.5)']
+        }]}, 
+        options:{
+            plugins: {
+            legend: { display: false}
+            }
         }
-    })
-    new Chart(myChart3, { 
-        type: 'doughnut', data: { 
-            datasets: [{ label: 'My knowledge in Bootstrap', data: [85, 15], backgroundColor: ['rgb(22, 144, 89)','rgba(53, 53, 53, 0.1)'], hoverOffset: 4, hoverBorderWidth: 3, cutout: '70%'}]
+})
+new Chart(myChart3, { 
+        type: 'doughnut',
+        data: {
+            labels: ['Bootstrap knowledge', 'Knowledge in progress'],
+        datasets: [{
+            label: ' % ', 
+            data: [80, 20],
+            backgroundColor: ['rgb(22, 144, 89)', 'rgba(53, 53, 53, 0.1)'],
+            hoverOffset: 8,
+            hoverBackgroundColor: ['rgb(5, 63, 38)', 'rgba(53, 53, 53, 0.5)']
+        }]}, 
+        options:{
+            plugins: {
+            legend: { display: false}
+            }
         }
-    })
-    new Chart(myChart4, {
-        type: 'doughnut', data: { 
-            datasets: [{ label: 'My knowledge in Materialize', data: [75, 25], backgroundColor: ['rgb(16, 108, 66)','rgba(53, 53, 53, 0.1)'], hoverOffset: 4, hoverBorderWidth: 3, cutout: '70%'}]
+})
+new Chart(myChart4, {
+        type: 'doughnut',
+        data: {
+            labels: ['Materialize knowledge', 'Knowledge in progress'],
+        datasets: [{
+            label: ' % ', 
+            data: [75, 25],
+            backgroundColor: ['rgb(16, 108, 66)', 'rgba(53, 53, 53, 0.1)'],
+            hoverOffset: 8,
+            hoverBackgroundColor: ['rgb(5, 63, 38)', 'rgba(53, 53, 53, 0.5)']
+        }]}, 
+        options:{
+            plugins: {
+            legend: { display: false}
+            }
         }
-    })
-    new Chart(myChart5, {
-        type: 'doughnut', data: { 
-            datasets: [{ label: 'My knowledge in Java Script', data: [80, 20], backgroundColor: ['rgb(11, 85, 52)','rgba(53, 53, 53, 0.1)'], hoverOffset: 4, hoverBorderWidth: 3, cutout: '70%'}]
+})
+new Chart(myChart5, {
+        type: 'doughnut',
+        data: {
+            labels: ['Java Script knowledge', 'Knowledge in progress'],
+        datasets: [{
+            label: ' % ', 
+            data: [70, 30],
+            backgroundColor: ['rgb(11, 85, 52)', 'rgba(53, 53, 53, 0.1)'],
+            hoverOffset: 8,
+            hoverBackgroundColor: ['rgb(5, 63, 38)', 'rgba(53, 53, 53, 0.5)']
+        }]}, 
+        options:{
+            plugins: {
+            legend: { display: false}
+            }
         }
-    })
-    new Chart(myChart6, {
-        type: 'doughnut', data: { 
-            datasets: [{ label: 'My knowledge in Java Script library jQuery', data: [75, 25], backgroundColor: ['rgb(6, 75, 44)','rgba(53, 53, 53, 0.1)'], hoverOffset: 4, hoverBorderWidth: 3, cutout: '70%'}]
+})
+new Chart(myChart6, {
+        type: 'doughnut',
+        data: {
+            labels: ['Java Script library jQuery knowledge', 'Knowledge in progress'],
+        datasets: [{
+            label: ' % ', 
+            data: [67, 33],
+            backgroundColor: ['rgb(6, 75, 44)', 'rgba(53, 53, 53, 0.1)'],
+            hoverOffset: 8,
+            hoverBackgroundColor: ['rgb(5, 63, 38)', 'rgba(53, 53, 53, 0.5)']
+        }]}, 
+        options:{
+            plugins: {
+            legend: { display: false}
+            }
         }
     })
 })
 
 myContact.addEventListener('click', function(){
-    // document.body.style.overflowY = 'auto'
+    multiscroll.style.display = 'none'
+    smallSize.style.display = 'none'
+    partSkills.style.display = 'none'
+    partProject.style.display = 'none'
+    partContacts.style.display = 'flex'
+})
+myProject.addEventListener('click', function(){
+    multiscroll.style.display = 'none'
+    smallSize.style.display = 'none'
+    partSkills.style.display = 'none'
+    partContacts.style.display = 'none'
+    partProject.style.display = 'flex'
+    // partProject.style.bottom='450px'
 
 })
 
