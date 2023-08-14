@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: darkslategray;
+}
+#columnFirst{
+    margin: 2px; 
+}
+#columnSecond{
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
+#columnFirst > div {
+    margin: 2px 0px;
+}
+#infoForGraphics{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 15px;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-weight: 600;
+    font-size: 110%;   
+}
+#infoForGraphics div{
+    padding: 0;
+    margin: 0;
+}
+#allInfo, #latest{
+    width: 350px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 15px;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-weight: 600;
+    font-size: 110%;
+}
+#latest div{
+   display: flex;
+   justify-content: center;
+   align-items:baseline;
+}
+#allInfo input, #allInfo div, #infoForGraphics input, #infoForGraphics div{
+    border-radius: 15px;
+    margin: 7px;
+    padding: 5px 10px;
+    font-family: 'M PLUS Code Latin', sans-serif;
+}
+#allInfo select, #infoForGraphics select{
+    border-radius: 15px;
+    margin: 7px 0;
+    padding: 5px 5px;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 70%;   
+}
+#result{
+    border: 3px solid black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    border-radius: 15px;
+    background-color: rgba(47, 79, 79, 0.779);
+    color: white;
+}
+#ok, #ok2{
+    font-size: 150%;
+    font-weight: 600;
+}
+:hover#ok{
+    cursor: pointer;
+    background-color: rgba(47, 79, 79, 0.779);
+    color: white;
+}
+:hover#myDate{
+    cursor: pointer;
+}
+:hover#allInfo select{
+    cursor: pointer;
+}
+#caption{
+   font-size: 150%;
+   margin: 0 5px;  
+   text-align: center;
+}
+#latest #dateForLatest{
+    font-size: 80%;
+    margin: 0 5px;  
+}
+table{
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+td, tr{
+    border-bottom: 3px solid black;  
+    padding: 5px;
+    text-align: center;
+    font-size: 110%;
+}
+#prev, #next, .pagination{
+    color: rgba(47, 79, 79, 0.779);
+}
+
