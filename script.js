@@ -13,8 +13,8 @@ $.fn.animate_Text = function() {
     });
     });
    };
-   $('#name').show();
-   $('#name').animate_Text();
+$('#name').show();
+$('#name').animate_Text();
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
@@ -23,14 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
       hoverEnabled: false
     });
   });
+
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.tooltipped');
     var instances = M.Tooltip.init(elems, 0);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.parallax');
-    var instances = M.Parallax.init(elems, 576);
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
 });
 
 let fotoArr = ['./DSC_1003.jpg', './DSC_1009.jpg', './DSC_1000.jpg']
@@ -46,6 +47,8 @@ let smallSize = document.getElementById('smallSize')
 let partSkills = document.getElementById('skills')
 let partContacts = document.getElementById('contact')
 let partProject = document.getElementById('project')
+let partEducation = document.getElementById('education')
+let contactFooterEmail = document.getElementById('contactFooterEmail')
 let timerId = 0, i = 1, choose
 
 let myChart1 = document.getElementById('myChart1')
@@ -55,7 +58,6 @@ let myChart4 = document.getElementById('myChart4')
 let myChart5 = document.getElementById('myChart5')
 let myChart6 = document.getElementById('myChart6')
 
-let contactFooterEmail = document.getElementById('contactFooterEmail')
 
 window.addEventListener('load', function(){
     foto.src = `${fotoArr[0]}`
@@ -64,24 +66,20 @@ window.addEventListener('load', function(){
         foto.src = `${fotoArr[i]}`
         i++
     }, 1800)
-
 })
+        //НЕДОРОБЛЕНО(Для копіювання інформації)!!
+            // contactFooterEmail.addEventListener('click', function(){
+            //     // contactFooterEmail.select()
+            //     console.log( contactFooterEmail.innerHTML)
+            //     document.execCommand("copy")
+            //     alert(`${contactFooterEmail.innerText}`)
+            // })
 
-// contactFooterEmail.addEventListener('click', function(){
-//     // contactFooterEmail.select()
-//     console.log( contactFooterEmail.innerHTML)
-//     document.execCommand("copy")
-    
-//     alert(`${contactFooterEmail.innerText}`)
-// })
-
-
-
-goHome.addEventListener('click', function(){
+goHome.addEventListener('click', function(e){
     partContacts.style.display = 'none'
     partSkills.style.display = 'none'
     partProject.style.display = 'none'
-    console.log(document.documentElement.clientWidth)
+    partEducation.style.display = 'none'
     if(document.documentElement.clientWidth <= 767) {
         smallSize.style.display = 'flex'
         multiscroll.style.display = 'none'
@@ -89,18 +87,39 @@ goHome.addEventListener('click', function(){
         multiscroll.style.display = 'flex'
         smallSize.style.display = 'none'
     }
-   
+    console.log(partContacts.style.display)
+    console.log(e.target.outerWidth, e.target.outerHeight)
 })
-myInfo.addEventListener('click', function(){
-    multiscroll.style.display = 'none'
-})
+
+window.onresize = function (e) {
+    if(e.target.outerWidth <= 767){
+        if((partContacts.style.display == 'none') || (partSkills.style.display == 'none')|| (partProject.style.display == 'none')|| (partEducation.style.display == 'none')){
+            smallSize.style.display = 'flex'
+            multiscroll.style.display = 'none'
+        }
+        if((partContacts.style.display == 'flex') || (partSkills.style.display == 'flex')|| (partProject.style.display == 'flex')|| (partEducation.style.display == 'flex')){
+            smallSize.style.display = 'none'
+            multiscroll.style.display = 'none'
+        }
+    } else if (e.target.outerWidth > 767) {
+        if((partContacts.style.display == 'none') || (partSkills.style.display == 'none')|| (partProject.style.display == 'none')|| (partEducation.style.display == 'none')){
+            smallSize.style.display = 'none'
+            multiscroll.style.display = 'flex'
+        }
+        if((partContacts.style.display == 'flex') || (partSkills.style.display == 'flex')|| (partProject.style.display == 'flex')|| (partEducation.style.display == 'flex')){
+            smallSize.style.display = 'none'
+            multiscroll.style.display = 'none'
+        }
+    }
+}
+
 mySkills.addEventListener('click', function(){
     multiscroll.style.display = 'none'
     smallSize.style.display = 'none'
     partContacts.style.display = 'none'
     partProject.style.display = 'none'
+    partEducation.style.display = 'none'
     partSkills.style.display = 'flex'
-    // document.body.overflow = 'auto'
 new Chart(myChart1, { 
         type: 'doughnut',
         data: {
@@ -210,6 +229,7 @@ myContact.addEventListener('click', function(){
     smallSize.style.display = 'none'
     partSkills.style.display = 'none'
     partProject.style.display = 'none'
+    partEducation.style.display = 'none'
     partContacts.style.display = 'flex'
 })
 myProject.addEventListener('click', function(){
@@ -217,9 +237,16 @@ myProject.addEventListener('click', function(){
     smallSize.style.display = 'none'
     partSkills.style.display = 'none'
     partContacts.style.display = 'none'
+    partEducation.style.display = 'none'
     partProject.style.display = 'flex'
-    // partProject.style.bottom='450px'
-
+})
+myInfo.addEventListener('click', function(){
+    multiscroll.style.display = 'none'
+    smallSize.style.display = 'none'
+    partSkills.style.display = 'none'
+    partContacts.style.display = 'none'
+    partProject.style.display = 'none'
+    partEducation.style.display = 'flex'
 })
 
 

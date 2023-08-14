@@ -16,9 +16,6 @@
 </head>
 
 <body>
-    <header>
-
-    </header>
     <main>
         <div id="menu" class="fixed-action-btn">
             <a class="btn-floating btn-large green darken-4">
@@ -28,17 +25,17 @@
                 <li id="goHome"><a class="btn-floating tooltipped green lighten-3" data-position="bottom"
                         data-tooltip="home page"><i class="material-icons">home</i></a></li>
                 <li id="myContact"><a class="btn-floating tooltipped green lighten-1" data-position="bottom"
-                        data-tooltip="contact"><i class="material-icons">contact_mail</i></a></li>
+                        data-tooltip="contacts"><i class="material-icons">contact_mail</i></a></li>
                 <li id="myProject"><a class="btn-floating tooltipped green" data-position="bottom"
-                        data-tooltip="project"><i class="material-icons">description</i></a></li>
+                        data-tooltip="projects"><i class="material-icons">description</i></a></li>
                 <li id="mySkills"><a class="btn-floating tooltipped green darken-1" data-position="bottom"
                         data-tooltip="skills"><i class="material-icons">school</i></a></li>
                 <li id="myInfo"><a class="btn-floating tooltipped green darken-3" data-position="bottom"
-                        data-tooltip="about education and experience"><i class="material-icons">account_circle</i></a> </li>
+                        data-tooltip="education and experience"><i class="material-icons">account_circle</i></a> </li>
             </ul>
         </div>
 
-        <div id="multiscroll" class="multiscroll" style="display: none;">
+        <div id="multiscroll" class="multiscroll">
             <div id="part1" class="ms-left">
                 <div class="ms-section">
                     <div id="info">
@@ -148,11 +145,82 @@
             </div>
         </div>
 
-
         <div id="education">
             <div id="aboutMyEducation">
                 <h3 id="subCaption">Education and experience</h3>
                 <h1 id="caption">MY EDUCATION AND <br> EXPERIENCE</h1>
+            </div>
+            <div id="aboutEduAndExp">
+            <ul class="collapsible" id="mainPartEducation">
+                <li>
+                    <div class="collapsible-header"><i class="large material-icons">library_books</i>My education</div>
+                    <div class="collapsible-body">
+                        <h3 id="year">01/09/2013 – 31/12/2018</h3>
+                        <h1 id="degree">Master's degree of 'Finance, Banking and Insurance'</h1>
+                        <h2 id="university"><i class=" tiny material-icons">location_on</i> Ivan Franko National
+                            University of Lviv, Lviv, Ukraine</h2>
+                        <p id="moreAboutEducation">Studied economic and social sciences, fundamentals of economic
+                            analysis, mathematical methods and models, statistics and probability theory, fiscal
+                            administration and customs.</p>
+                        <hr>
+                        <h3 id="year">09/2022 – 09/2023</h3>
+                        <h1 id="degree">Front-end Developer</h1>
+                        <h2 id="university"><i class=" tiny material-icons">location_on</i> Computer IT Step Academy,
+                            Lviv, Ukraine</h2>
+                        <p id="moreAboutEducation">Studied Web basics, HTML structure (grid layout and flexbox), formatting using CSS. Bootstrap and Materialize. GitHub. <br><b><i>JavaScript:</i></b><br>
+                            - object, arrays, String, Date, Math. Fundamentals of object-oriented programming. Events.
+                            Browser Object Model. Document Object Model. Forms (checking the validity of forms). Using
+                            cookies, Local storage. Drawing with canvas, support for media capabilities. JSON, AJAX; <br>
+                            <b><i>jQuery library:</i></b><br> - jQuery events. Styles and animations. Interaction with DOM. AJAX and
+                            jQuery;</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">language</i>Language knowledge</div>
+                    <div class="collapsible-body">
+                        <h3 id="year">09/2022 – 01/2023</h3>
+                        <h1 id="degree">English course</h1>
+                        <h2 id="university"><i class=" tiny material-icons">location_on</i>Language School 'GreenForest', Lviv, Ukraine</h2>
+                        <table id="tabLanguage">
+                            <tr>
+                                <th>Listening</th>
+                                <th>Reading</th>
+                                <th>Speaking</th>
+                                <th>Communication</th>
+                                <th>Writing</th>
+                            </tr>
+                            <tr>
+                                <td>B1</td>
+                                <td>B2</td>
+                                <td>B1</td>
+                                <td>B1</td>
+                                <td>B2</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">work</i>My experience</div>
+                    <div class="collapsible-body">
+                        <h3 id="year">09/2016 – 02/2017</h3>
+                        <h1 id="degree">Specialist of the Head Office</h1>
+                        <h2 id="university"><i class=" tiny material-icons">location_on</i>JSC 'Kredobank',
+                            Lviv, Ukraine</h2>
+                        <p id="moreAboutEducation">Worked as a specialist in the credit monitoring department and credit analysis centre.</p>
+                    <hr>
+                    <h3 id="year">09/2018 – 08/2023</h3>
+                        <h1 id="degree">Specialist of the operational strategies implementation department</h1>
+                        <h2 id="university"><i class=" tiny material-icons">location_on</i>LLC FC 'Credit-Capital',
+                            Lviv, Ukraine</h2>
+                    </div>
+                </li>
+            </ul>
+            </div>
+            
+            <div class="footer-copyright" style="position: absolute; bottom: 0; z-index: -1;">
+                <div class="container" style="font-size: 50%; width: 100%; font-weight: 100; padding-bottom: 10px;">
+                    Copyright ©2023 All rights reserved | This template is made by Julia Sushko
+                </div>
             </div>
         </div>
 
@@ -187,15 +255,12 @@
                     <canvas id="myChart6"></canvas>
                 </div>
             </div>
-            <div class="footer-copyright" style="position: relative; top: 95%;">
+            <div class="footer-copyright" style="position: relative; bottom: 0;">
                 <div class="container" style="font-size: 50%; width: 100%; font-weight: 100; padding-bottom: 10px;">
                     Copyright ©2023 All rights reserved | This template is made by Julia Sushko
                 </div>
             </div>
         </div>
-
-
-
 
         <div id="project">
             <div id="captionForProjects">
@@ -208,7 +273,8 @@
                     <h3 id="subCaption">Case #1</h3>
                     <h2 id="caption">CSS Generator</h2>
                     <p>An application for generating and using CSS-style.</p>
-                    <a class="waves-effect waves-light btn green darken-1" href="./CSS GENERATOR/index.html" target="_blank">Go to project</a>
+                    <a class="waves-effect waves-light btn green darken-1" href="./CSS GENERATOR/index.html"
+                        target="_blank">Go to project</a>
                 </div>
                 <div id="currency" class="case">
                     <img src="./icons/currency_85911.png" alt="">
@@ -216,24 +282,27 @@
                     <h2 id="caption">Currency Exchange</h2>
                     <p>Application for calculating the exchange rate for the current date, dynamics of exchange rate
                         changes, currency statistics.</p>
-                    <a class="waves-effect waves-light btn green darken-1" href="./CURRENCY/index.html" target="_blank">Go to project</a>
+                    <a class="waves-effect waves-light btn green darken-1" href="./CURRENCY/index.html"
+                        target="_blank">Go to project</a>
                 </div>
                 <div id="player" class="case">
                     <img src="./icons/353444-audio-film-media-movie-music-play-player-video_107499.png" alt="">
                     <h3 id="subCaption">Case #3</h3>
                     <h2 id="caption">MP3 Player</h2>
                     <p>Music listening application (playlist is static, music is stored in an array).</p>
-                    <a class="waves-effect waves-light btn green darken-1" href="./MP3 PLAYER/index.html" target="_blank">Go to project</a>
+                    <a class="waves-effect waves-light btn green darken-1" href="./MP3 PLAYER/index.html"
+                        target="_blank">Go to project</a>
                 </div>
                 <div id="paint" class="case">
                     <img src="./icons/creativity4x_86999.png" alt="">
                     <h3 id="subCaption">Case #4</h3>
                     <h2 id="caption">Drawing Application</h2>
                     <p>A drawing application modelled on Paint.</p>
-                    <a class="waves-effect waves-light btn green darken-1" href="./DRAW APLICATION/index.html" target="_blank">Go to project</a>
+                    <a class="waves-effect waves-light btn green darken-1" href="./DRAW APLICATION/index.html"
+                        target="_blank">Go to project</a>
                 </div>
             </div>
-            <div class="footer-copyright" style="position: relative; bottom: 10px">
+            <div class="footer-copyright" style="position: relative; bottom: 0px">
                 <div class="container" style="font-size: 50%; width: 100%; font-weight: 100; padding-bottom: 10px;">
                     Copyright ©2023 All rights reserved | This template is made by Julia Sushko
                 </div>
@@ -302,29 +371,14 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright" style="position: fixed; top: 95%;">
+            <div class="footer-copyright" style="position: relative; bottom: 0;">
                 <div class="container" style="font-size: 50%; width: 100%; font-weight: 100; padding-bottom: 10px;">
                     Copyright ©2023 All rights reserved | This template is made by Julia Sushko
                 </div>
             </div>
         </div>
-
-
     </main>
-    <!-- <footer>
-            <div class="footer-copyright">
-                <div class="container" style="font-size: 50%; width: 100%; font-weight: 100; padding: 4px;" >
-                    Copyright ©2023 All rights reserved | This template is made by Julia Sushko
-                </div>
-            </div>
-        </footer> -->
-
-
-
-
-
-
-
+    
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -5,7 +5,14 @@
         opacity: 0.2;
     }            
     to { bottom: 50px; } 
-  }
+}
+@keyframes go-center-education{        
+    from { 
+        bottom: -200px; 
+        opacity: 0.2;
+    }            
+    to { bottom: 0px; } 
+}
 
 @media(max-width: 767px){
     #multiscroll{
@@ -17,10 +24,13 @@
     #smallSize{
         display: flex;
         flex-direction: column;
-        /* overflow-y: scroll !important; */
     }
     #project{
         height: 100% !important;
+    }
+    #education{
+        height: 100% !important;
+        background-color: white !important;
     }
     #allCases{
         animation: none !important;
@@ -28,11 +38,6 @@
         top: 20px !important;
         padding: 15px 0;
     }
-    
-    /* #skills{
-        overflow-y: scroll !important;
-
-    } */
     #contact{
         height: fit-content!important;  
     }
@@ -61,8 +66,7 @@
     }
     #allCases > div{
         width: 250px !important;
-    }
-    
+    }   
 }
 @media(min-width: 768px) and (max-width: 992px){
     #multiscroll{
@@ -239,7 +243,6 @@ body{
     padding: 10px 0;
     background-color:  rgb(9, 121, 70);
 }
-
 #moreInfo > div{
     display: flex;
     justify-content: center;
@@ -292,37 +295,41 @@ body{
     font-size: 54px;
     color: rgb(9, 121, 70); 
 }
+
 #skills{
     height: 100%;
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px 0;
+    padding: 25px 0 0 0;
+    background-color: rgba(9, 121, 71, 0.3);
     /* overflow-y: scroll !important; */
 }
-#skills #subCaption, #skills #caption, #contact #subCaption, #contact #caption, #project #subCaption, #project #caption{
+#skills #subCaption, #skills #caption, #contact #subCaption, #contact #caption, #project #subCaption, #project #caption, #education #subCaption, #education #caption{
     padding: 0;
     margin: 0;
 }
-#skills #subCaption, #contact #subCaption, #project #subCaption{
+#skills #subCaption, #contact #subCaption, #project #subCaption, #education #subCaption{
     font-size: 80%;   
 }
-#aboutMySkills{
+#aboutMySkills, #aboutMyEducation{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     /* height: 25%; */
+    width: 100%;
 }
+
 #graphics{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     /* height: 75%;  */
-    background-color: rgb(7, 92, 54); 
-    width: 100%;
+    /* background-color: rgb(7, 92, 54);  */
+    width: 75%;
     padding: 15px 0;
 }
 #graphics > div{
@@ -334,22 +341,18 @@ body{
     width: 270px ;
     height: 270px ;
     margin: 15px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 25px;
 }
 #graphics > div > h5{
     font-size: 75%;
 }
 #myChart1, #myChart2, #myChart3, #myChart4, #myChart5, #myChart6{
-    /* width: 180px !important;
-    height: 180px !important; */
     padding: 7px;  
 }
 
-
-
 #contact{
-    height: calc(100vh - 30px);
+    height: 100vh;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -359,7 +362,7 @@ body{
 #captionForContact{
     padding: 0;
     margin: 0;
-    height: 35%;
+    height: 50%;
     width: 100%;
     background-image: url(./patrick-fore-UxPYxMIDcKU-unsplash.jpg);
     background-size: cover;
@@ -376,7 +379,7 @@ body{
     padding: 15px 0;
 }
 #moreContactInfo{
-    height: 20%;
+    height: 15%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -403,15 +406,15 @@ body{
     transform: scale(1.05);   
 }
 #formForContact{
-    height: 45%;
+    height: 100%;
     padding: 5px 25px;
     width: 50%;
 }
 #contactMe{
     width: 100%;
     display: flex;
-    flex-direction: row;   
-    /* flex-wrap: wrap; */
+    flex-direction: row;  
+    height: 35%; 
 }
 #followMe{
     width: 50%;
@@ -438,7 +441,6 @@ body{
     padding-left: 15px;
 }
 
-
 #project{
     height: 100vh;
     display: none;
@@ -447,9 +449,7 @@ body{
     justify-content: center;
     width: 100%;
     background-color: rgba(53, 53, 53, 0.1);
-    padding: 15px 0;
-
-
+    padding: 25px 0 0 0;
 }
 #captionForProjects{
     padding: 0;
@@ -478,7 +478,6 @@ body{
     width: 21%;
     padding: 5px;  
 }
-
 #cssGenerator, #currency, #player, #paint{
     display: flex;
     flex-direction: column;
@@ -507,19 +506,6 @@ body{
 #cssGenerator img, #currency img, #player img, #paint img{
     padding: 15px 0;
 }
-/* .case:hover{
-    background-color:  rgb(9, 121, 70);
-    color: white;   
-}
-.case:hover img{
-    filter: invert(100);
-}
-.case:hover h3{
-    color: white;   
-}
-.case:hover h2{
-    color: white;   
-}  */
 #cssGenerator:hover{
     background-color:  rgb(9, 121, 70);
     color: white;   
@@ -572,6 +558,82 @@ body{
 #paint:hover h2{
     color: white;   
 }
+
+#education{
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(9, 121, 71, 0.3);
+    padding: 25px 0 0 0;
+    text-align: center;
+}
+#mainPartEducation{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: go-center-education 2s;
+    bottom: 0px;
+}
+#aboutEduAndExp{
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: go-center-education 2s;
+    bottom: 0px;
+}
+#mainPartEducation li{
+    width: 100%;
+    background-color: rgb(9, 121, 70);
+    font-size: 80%;
+    font-weight: 100;
+    color: rgb(9, 121, 70);
+}
+#mainPartEducation #year{
+    color:  rgb(3, 36, 21);
+    font-size: 75%;
+    text-align: justify;
+    margin: 3px;
+    font-weight: 100;
+}
+#mainPartEducation #degree{
+    color: white;
+    font-size: 120%;
+    text-align: justify;
+    margin: 7px;
+    font-weight: 200;
+}
+#mainPartEducation #university{
+    color: rgba(255, 255, 255, 0.656);
+    font-size: 90%;
+    text-align: justify;
+    margin: 3px;
+    font-weight: 100;
+}
+#mainPartEducation #moreAboutEducation{
+    color: white;
+    font-size: 80%;
+    text-align: justify;
+    font-weight: 100;
+    margin: 7px;
+}
+#mainPartEducation #tabLanguage tr td, tr th{
+    color: white;
+    font-size: 80%;
+    font-weight: 100;
+    margin: 7px;
+    text-align: center;
+}
+
 
 
 
